@@ -6,6 +6,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <style>
         .error { color: red }
+
     </style>
 </head>
 
@@ -19,6 +20,13 @@
 
     <span th:if="${#fields.hasErrors('lastName')}"
           th:errors="*{lastName}"
+          class="error"></span>
+    <br><br>
+
+    Course code (*): <input type="text" th:field="*{courseCode}">
+
+    <span th:if="${#fields.hasErrors('courseCode')}"
+          th:errors="*{courseCode}"
           class="error"></span>
     <br><br>
     <input type="submit" value="Submit"/>
